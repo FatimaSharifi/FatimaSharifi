@@ -61,7 +61,7 @@
     <h1>Maryam, do you want to be my Galentine? 💕</h1>
 
     <div class="buttons">
-      <div class="btn yes" onclick="yesClicked()">Yes</div>
+      <div class="btn yes" onclick="goToYesPage()">Yes</div>
       <div class="btn no" id="noBtn">No</div>
     </div>
   </div>
@@ -70,6 +70,10 @@
     function yesClicked() {
       alert("Yay! 💕 Happy Galentine’s Day!");}
     const noBtn = document.getElementById("noBtn");
+
+    function goToYesPage() {
+      window.location.href = "yes.html";}
+
 
     noBtn.addEventListener("mouseover", () => {
       const x = Math.random() * 300 - 150;
