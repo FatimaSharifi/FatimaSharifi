@@ -1,11 +1,80 @@
 <!DOCTYPE html>
-<html>
-  <head> 
-    <title> To find the source  </title>
-    <meta http-equiv="refresh" content="5">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Galentine 💖</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffe6f0; /* light pink */
+      font-family: 'Comic Sans MS', cursive;
+    }
+
+    .main-container {
+      background-color: #ffb6c1; /* pink */
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* shadow ~0.8 feel */
+      position: relative;
+    }
+
+    h1 {
+      color: #800040;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      border-radius: 15px;
+      background-color: #ff69b4;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .yes:hover {
+      transform: scale(5); /* 5x larger */
+    }
+
+    .no {
+      position: absolute;
+    }
+  </style>
 </head>
-  <body>
-    <p>Hiiiii!</p>
-    <p> Is it working? </p>
-  </body>
+<body>
+
+  <div class="main-container">
+    <h1>Maryam, do you want to be my Galentine? 💕</h1>
+
+    <div class="buttons">
+      <div class="btn yes">Yes</div>
+      <div class="btn no" id="noBtn">No</div>
+    </div>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("noBtn");
+
+    noBtn.addEventListener("mouseover", () => {
+      const x = Math.random() * 300 - 150;
+      const y = Math.random() * 200 - 100;
+      noBtn.style.transform = `translate(${x}px, ${y}px)`;
+    });
+  </script>
+
+</body>
 </html>
