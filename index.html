@@ -61,12 +61,14 @@
     <h1>Maryam, do you want to be my Galentine? 💕</h1>
 
     <div class="buttons">
-      <div class="btn yes">Yes</div>
+      <div class="btn yes" onclick="yesClicked()">Yes</div>
       <div class="btn no" id="noBtn">No</div>
     </div>
   </div>
 
   <script>
+    function yesClicked() {
+      alert("Yay! 💕 Happy Galentine’s Day!");}
     const noBtn = document.getElementById("noBtn");
 
     noBtn.addEventListener("mouseover", () => {
